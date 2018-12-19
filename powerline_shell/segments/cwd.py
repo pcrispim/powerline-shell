@@ -98,7 +98,7 @@ def add_cwd_segment(powerline):
 
         if not (is_last_dir and full_cwd):
             name = maybe_shorten_name(powerline, name)
-        powerline.append(' %s ' % name, fg, bg, separator, separator_fg)
+        powerline.append(" %s " % name, fg, bg, separator, separator_fg)
 
 class Segment(BasicSegment):
     def add_to_powerline(self):

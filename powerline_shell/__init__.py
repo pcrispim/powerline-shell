@@ -74,12 +74,27 @@ class Powerline(object):
             'separator': '',
             'separator_thin': ''
         },
+        'nerd': {
+            'lock': u'\uF084',
+            'network': u'\uF817',
+            ## original...
+            # 'separator': u'\uE0B0',
+            # 'separator_thin': u'\uE0B1'
+            ## rounded...
+            'separator': u'\uE0B4',
+            # 'separator_thin': u'\uE0B5'
+            'separator_thin': u'\uE38F'
+            ## forward slash...
+            # 'separator': u'\uE0BC',
+            # 'separator_thin': u'\uE0BD'
+        },
     }
 
     color_templates = {
         'bash': r'\[\e%s\]',
         'tcsh': r'%%{\e%s%%}',
         'zsh': '%%{%s%%}',
+        'fish': '%s',
         'bare': '%s',
     }
 
@@ -195,7 +210,7 @@ def main():
                             help='Generate the default config and print it to stdout')
     arg_parser.add_argument('--shell', action='store', default='bash',
                             help='Set this to your shell type',
-                            choices=['bash', 'tcsh', 'zsh', 'bare'])
+                            choices=['bash', 'tcsh', 'zsh', 'bare', 'fish'])
     arg_parser.add_argument('prev_error', nargs='?', type=int, default=0,
                             help='Error code returned by the last command')
     args = arg_parser.parse_args()

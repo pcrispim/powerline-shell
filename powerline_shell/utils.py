@@ -16,19 +16,34 @@ else:
 
 class RepoStats(object):
     symbols = {
-        'detached': u'\u2693',
-        'ahead': u'\u2B06',
-        'behind': u'\u2B07',
-        'staged': u'\u2714',
-        'changed': u'\u270E',
-        'new': u'?',
-        'conflicted': u'\u273C',
-        'stash': u'\u2398',
-        'git': u'\uE0A0',
+        'detached': u' \uE729',
+        'ahead': u' \uE352',
+        'behind': u' \uE33F',
+        'staged': u' \uE257',
+        'changed': u' \uF040',
+        'new': u' \uE701',
+        'conflicted': u' \uF00D',
+        'stash': u' \uE706',
+        'git': u'\uE725',
+        ## unchanged...
         'hg': u'\u263F',
         'bzr': u'\u2B61\u20DF',
         'fossil': u'\u2332',
         'svn': u'\u2446'
+        ## defaults...
+        # 'detached': u'\u2693',
+        # 'ahead': u'\u2B06',
+        # 'behind': u'\u2B07',
+        # 'staged': u'\u2714',
+        # 'changed': u'\u270E',
+        # 'new': u'?',
+        # 'conflicted': u'\u273C',
+        # 'stash': u'\u2398',
+        # 'git': u'\uE0A0',
+        # 'hg': u'\u263F',
+        # 'bzr': u'\u2B61\u20DF',
+        # 'fossil': u'\u2332',
+        # 'svn': u'\u2446'
     }
 
     def __init__(self, ahead=0, behind=0, new=0, changed=0, staged=0, conflicted=0):

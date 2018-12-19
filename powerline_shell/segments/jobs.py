@@ -15,7 +15,7 @@ class Segment(ThreadedSegment):
                 output_proc.communicate()[0].decode("utf-8").splitlines()[1:])
             self.num_jobs = output.count(os.getppid()) - 1
         else:
-            pppid_proc = subprocess.Popen(['ps', '-p', str(os.getppid()), '-oppid='],
+            pppid_proc = subprocess.Popen(['ps', '-p', str(os.getpid()), '-oppid='],
                                           stdout=subprocess.PIPE)
             pppid = pppid_proc.communicate()[0].decode("utf-8").strip()
             output_proc = subprocess.Popen(['ps', '-a', '-o', 'ppid'],

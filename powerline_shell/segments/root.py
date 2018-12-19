@@ -5,10 +5,11 @@ class Segment(BasicSegment):
     def add_to_powerline(self):
         powerline = self.powerline
         root_indicators = {
-            'bash': ' \\$ ',
-            'tcsh': ' %# ',
-            'zsh': ' %# ',
-            'bare': ' $ ',
+            'bash': ' $>',
+            'tcsh': ' %>',
+            'zsh': ' #>',
+            'bare': ' >',
+            'fish': ' $>',
         }
         bg = powerline.theme.CMD_PASSED_BG
         fg = powerline.theme.CMD_PASSED_FG
