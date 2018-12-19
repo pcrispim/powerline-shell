@@ -1,5 +1,8 @@
-# A Powerline style prompt for your shell
+> This is a fork from [Powerline Shell](https://github.com/b-ryan/powerline-shell).
+> Most changes are cosmetic and non-functional.
 
+A Powerline style prompt for your shell
+---
 A beautiful and useful prompt generator for Bash, ZSH, Fish, and tcsh:
 
 ![MacVim+Solarized+Powerline+CtrlP](https://raw.github.com/b-ryan/powerline-shell/master/bash-powerline-screenshot.png)
